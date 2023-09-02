@@ -1,16 +1,6 @@
 import styled from "styled-components";
-import { CloseOutlined} from "@mui/icons-material";
-import React, { useState, useEffect } from "react";
-// import { db } from "./firebase/config";
-// import {
-//   query,
-//   collection,
-//   onSnapshot,
-//   updateDoc,
-//   doc,
-//   addDoc,
-//   deleteDoc,
-// } from "firebase/firestore";
+import { CloseOutlined } from "@mui/icons-material";
+import React, { useState, } from "react";
 
 const Container = styled.div`
   max-width: 400px;
@@ -78,51 +68,6 @@ const App = () => {
       )
     );
   };
-
-  // const [tasks, setTasks] = useState([]);
-  // const [input, setInput] = useState("");
-
-  // //Add Task
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault(e);
-  //   if (input === "") {
-  //     alert("Please enter a valid todo");
-  //     return;
-  //   }
-  //   await addDoc(collection(db, "Todo List"), {
-  //     id: Math.floor(Math.random() * 1000),
-  //     text: input,
-  //     completed: false,
-  //   });
-
-  //   setInput("");
-  // };
-
-  // // Read Todo from firebase
-  // useEffect(() => {
-  //   const q = query(collection(db, "Todo List"));
-  //   const unsubscribe = onSnapshot(q, (querySnapshot) => {
-  //     let tasksArr = [];
-  //     querySnapshot.forEach((doc) => {
-  //       tasksArr.push({ ...doc.data(), id: doc.id });
-  //     });
-  //     setTasks(tasksArr);
-  //   });
-  //   return () => unsubscribe();
-  // }, []);
-
-  // // Delete Task
-  // const deleteTask = async (id) => {
-  //   await deleteDoc(doc(db, "Todo List", id));
-  // };
-
-   
-  // // Update Todo in firebase
-  // const toggleComplete = async (todo) => {
-  //   await updateDoc(doc(db, "Todo list", todo.id), {
-  //     completed: !todo.completed,
-  //   });
-  // };
 
   const date = new Date();
   const days = [
